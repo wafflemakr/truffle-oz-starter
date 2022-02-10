@@ -19,9 +19,9 @@ contract("Contract To Test", ([owner, alice, bob, charlie, random]) => {
   });
 
   describe("Title for test group #1", function () {
-    it("test #1 description", async function () {
+    it("should have correct owner address", async function () {
       const _owner = await instance.owner();
-      assert.equal(_owner, owner);
+      expect(_owner).to.equal(owner);
     });
     it("test #2 description", async function () {});
     it("test #3 description", async function () {});
